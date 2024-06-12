@@ -235,19 +235,25 @@ WSGI_APPLICATION = 'transport.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.environ.get('DB_NAME', 'railway'),
+#         'USER': os.environ.get('DB_USER', 'postgres'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD', 'sCLbJsfqYkQfhmXKfnxIgQTWhRypATcE'),
+#         'HOST': os.environ.get('DB_HOST', 'viaduct.proxy.rlwy.net'),
+#         'PORT': os.environ.get('DB_PORT', '52319'),
+#         # 'NAME': 'railway',
+#         # 'USER': 'postgres',
+#         # 'PASSWORD': 'sCLbJsfqYkQfhmXKfnxIgQTWhRypATcE',
+#         # 'HOST': 'viaduct.proxy.rlwy.net',
+#         # 'PORT': '52319',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME', 'railway'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'sCLbJsfqYkQfhmXKfnxIgQTWhRypATcE'),
-        'HOST': os.environ.get('DB_HOST', 'viaduct.proxy.rlwy.net'),
-        'PORT': os.environ.get('DB_PORT', '52319'),
-        # 'NAME': 'railway',
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'sCLbJsfqYkQfhmXKfnxIgQTWhRypATcE',
-        # 'HOST': 'viaduct.proxy.rlwy.net',
-        # 'PORT': '52319',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
